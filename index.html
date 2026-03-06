@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alwady for Software solutions | Build. Test. Launch. Grow.  — Mobile App Development, Testing & Growth</title>
+  <meta name="description" content="End‑to‑end mobile app development studio in the UAE. We plan, design, develop, test, launch and grow iOS/Android apps.">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Language & Theme Controls -->
+<div style="position:fixed;bottom:20px;right:20px;display:flex;gap:8px;z-index:1000;">
+  <button id="themeToggle" class="cta">🌓</button>
+  <button id="langToggle" class="cta">عربي</button>
+</div>
+
+
+  <!-- ===== NAV ===== -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Alwady for Software solutions">
+        <img src="assets/alwady-logo.jpeg" alt="A descriptive text of the image" width="40" height="40" style="border-radius: 15px;">
+        <!-- <div class="logo" aria-hidden="true"></div> -->
+        <strong>Alwady for Software solutions</strong>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+      </nav>
+      <button class="hamb" aria-controls="mobile" aria-expanded="false">☰ Menu</button>
+    </div>
+    <!-- <div id="mobile" class="container" role="dialog" aria-modal="false">
+      <a href="#services" onclick="toggleMobile(false)">Services</a>
+      <a href="#process" onclick="toggleMobile(false)">Process</a>
+      <a href="#about" onclick="toggleMobile(false)">About</a>
+      <a href="#contact" onclick="toggleMobile(false)" class="cta">Get a Quote</a>
+    </div> -->
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main id="home" class="hero">
+    <div class="container grid">
+      <div>
+        <h1 class="headline reveal">Build. Test. Launch. <span style="background:linear-gradient(90deg,var(--primary),var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent">Grow.</span></h1>
+        <p class="sub reveal" style="transition-delay:.08s">End‑to‑end mobile Software solutions . From strategy and design to QA, deployment and growth marketing — crafted in the UAE, delivered worldwide.</p>
+        <div class="actions reveal" style="transition-delay:.15s">
+          <button class="cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Start your project</button>
+          <a class="outline link" href="#services">Explore services ↓</a>
+        </div>
+      </div>
+      <div class="device reveal" style="transition-delay:.1s">
+        <div class="screen">
+          <div class="bubble" style="top:14%"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <h2 class="reveal">Services</h2>
+      <p class="lead reveal">A complete, modular stack — select what you need, or hire us end‑to‑end.</p>
+
+      <!-- Category tabs (filter) -->
+      <div class="tabs reveal" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-filter="all">All</button>
+        <button class="tab" role="tab" data-filter="strategy">Strategy</button>
+        <button class="tab" role="tab" data-filter="design">Design & Dev</button>
+        <button class="tab" role="tab" data-filter="qa">Testing & QA</button>
+        <button class="tab" role="tab" data-filter="maint">Maintenance</button>
+        <button class="tab" role="tab" data-filter="growth">Growth & Marketing</button>
+      </div>
+
+      <div class="services">
+        <!-- Strategy -->
+        <article class="card reveal" data-cat="strategy">
+          <span class="pill">Strategy</span>
+          <h3>Software Consultancy</h3>
+          <p>Product strategy, monetization, roadmapping and architecture guidance to maximise ROI.</p>
+        </article>
+        <article class="card reveal" data-cat="strategy">
+          <span class="pill">Strategy</span>
+          <h3>Requirements & Specification</h3>
+          <p>Workshops, user stories and tech specs that de‑risk delivery before code begins.</p>
+        </article>
+
+        <!-- Design & Dev -->
+           <article class="card reveal" data-cat="design">
+          <span class="pill">Design & Dev</span>
+          <h3>Professional Digital Presence.</h3>
+          <p>comprehensive digital presence for your brand. Professional company profiles and a sharp visual identity.</p>
+        </article>
+        
+        <article class="card reveal" data-cat="design">
+          <span class="pill">Design & Dev</span>
+          <h3>Custom Web Development</h3>
+          <p>fast, responsive, and secure websites tailored to your specific business goals. Using modern frameworks and clean code.</p>
+        </article>
+        <article class="card reveal" data-cat="design">
+          <span class="pill">Design & Dev</span>
+          <h3>UI/UX Design & Prototyping</h3>
+          <p>Wireframes, prototypes and user testing to validate flows and craft delightful interfaces.</p>
+        </article>
+        <article class="card reveal" data-cat="design">
+          <span class="pill">Design & Dev</span>
+          <h3>Mobile App Development</h3>
+          <p>High‑performance iOS/Android and cross‑platform apps with clean architecture.</p>
+        </article>
+      
+        <article class="card reveal" data-cat="design">
+          <span class="pill">Design & Dev</span>
+          <h3>App Integration & Backend</h3>
+          <p>Secure APIs, databases and cloud (Firebase/AWS) for reliable, scalable apps.</p>
+        </article>
+
+        <!-- QA -->
+        <article class="card reveal" data-cat="qa">
+          <span class="pill">Testing & QA</span>
+          <h3>Functional Testing</h3>
+          <p>End‑to‑end validation that features work under real‑world scenarios.</p>
+        </article>
+        <article class="card reveal" data-cat="qa">
+          <span class="pill">Testing & QA</span>
+          <h3>Performance & Load</h3>
+          <p>Profiling across devices, networks and user loads to ensure silky performance.</p>
+        </article>
+        <article class="card reveal" data-cat="qa">
+          <span class="pill">Testing & QA</span>
+          <h3>Automation & Regression</h3>
+          <p>Automated suites to prevent regressions and accelerate releases.</p>
+        </article>
+        <article class="card reveal" data-cat="qa">
+          <span class="pill">Testing & QA</span>
+          <h3>Security & Compliance</h3>
+          <p>Vulnerability checks and compliance with UAE PDPL / GDPR best practices.</p>
+        </article>
+
+        <!-- Maintenance -->
+        <article class="card reveal" data-cat="maint">
+          <span class="pill">Maintenance</span>
+          <h3>App Migration & Modernization</h3>
+          <p>Refactors and upgrades from legacy stacks to modern frameworks.</p>
+        </article>
+        <article class="card reveal" data-cat="maint">
+          <span class="pill">Maintenance</span>
+          <h3>Maintenance & Continuous Improvement</h3>
+          <p>Bug fixes, updates and performance tuning with SLA options.</p>
+        </article>
+        <article class="card reveal" data-cat="maint">
+          <span class="pill">Maintenance</span>
+          <h3>Deployment & Store Management</h3>
+          <p>App Store & Google Play submissions, compliance and ASO metadata.</p>
+        </article>
+
+        <!-- Growth -->
+        <article class="card reveal" data-cat="growth">
+          <span class="pill">Growth</span>
+          <h3>Growth Strategy & Analytics</h3>
+          <p>Instrumentation (Firebase/Mixpanel/Appsflyer) and KPI dashboards for data‑driven growth.</p>
+        </article>
+        <article class="card reveal" data-cat="growth">
+          <span class="pill">Growth</span>
+          <h3>Marketing & Campaigns</h3>
+          <p>Performance ads, influencer and social campaigns to drive installs and LTV.</p>
+        </article>
+        <article class="card reveal" data-cat="growth">
+          <span class="pill">Growth</span>
+          <h3>User Retention & Engagement</h3>
+          <p>Push, in‑app messaging and loyalty mechanics to increase retention.</p>
+        </article>
+        <article class="card reveal" data-cat="growth">
+          <span class="pill">Growth</span>
+          <h3>App Store Optimization (ASO)</h3>
+          <p>Titles, visuals and keywords tuned for store visibility and conversion.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process">
+    <div class="container">
+      <h2 class="reveal">How we work</h2>
+      <p class="lead reveal">Transparent, iterative and outcome‑driven.</p>
+      <div class="process">
+        <div class="step reveal"><div class="num">01</div><strong>Discover</strong><p class="muted">Goals, users, constraints and success metrics.</p></div>
+        <div class="step reveal"><div class="num">02</div><strong>Design</strong><p class="muted">Flows, wireframes and prototypes validated early.</p></div>
+        <div class="step reveal"><div class="num">03</div><strong>Build & QA</strong><p class="muted">Clean architecture, automated tests and CI.</p></div>
+        <div class="step reveal"><div class="num">04</div><strong>Launch & Grow</strong><p class="muted">Release, analytics and growth sprints.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="reveal">Our Work</h2>
+      <p class="lead reveal">A curated collection of our projects showcasing end-to-end solutions, from company profiles and web development to mobile apps, UI/UX design, and more. Each project demonstrates our expertise in crafting impactful, high-quality digital experiences tailored to client goals.</p>
+  <div class="container">
+  <div class="project-card reveal">
+    <div class="project-media">
+      <img src="assets/work2.png" alt="Project preview" class="main-img">
+
+      <div class="thumbs">
+        <img src="assets/work2.png" alt="">
+        <img src="assets/work3.png" alt="">
+        <img src="assets/work1.png" alt="">
+        <img src="assets/work4.png" alt="">
+      </div>
+    </div>
+
+    <div class="project-info">
+      <span class="pill">Website Development</span>
+      <h3>Showcase of Our Corporate Profile Projects</h3>
+      <p>
+        We design and develop professional company profiles that highlight your business identity, services, and achievements. Each project combines clean design, engaging visuals, and strategic storytelling to present companies with a polished, modern digital presence that builds credibility and attracts clients.        </p>
+    </div>
+  </div>
+</div>
+ <div class="container">
+  <div class="project-card reveal">
+    <div class="project-media">
+      <img src="assets/shot1.png" alt="Project preview" class="main-img">
+
+      <div class="thumbs">
+        <img src="assets/shot1.png" alt="">
+        <img src="assets/shot2.png" alt="">
+        <img src="assets/shot3.png" alt="">
+      </div>
+    </div>
+
+    <div class="project-info">
+      <span class="pill">Mobile Development</span>
+      <h3>Showcase of Our Mobile App Projects</h3>
+      <p>
+ Crafting high-performance iOS and Android apps with clean architecture, intuitive UI/UX, and seamless integration. From concept to deployment, we build mobile experiences that engage users and scale with your business.   </div>
+  </div>
+</div>
+  
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+     <div class="booking-container">   
+<div class="meeting-box">
+
+<h3>Schedule a Meeting</h3>
+
+<form id="meetingForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<input type="text" id="datetime" placeholder="Select date & time" required>
+
+<button type="submit">Book Meeting</button>
+
+</form>
+<div class="booking-card">
+    <form id="meetingForm">
+      <!-- form inputs here -->
+    </form>
+  </div>
+</div>
+
+  <!-- New animated object -->
+<div class="info-panel in">
+  <div class="icon">📚</div>
+  <h3 class="headline">Let’s build something great</h3>
+  <p>Schedule your meeting easily.</p>
+
+  <!-- Floating chat icon -->
+  <div class="icon floating-icon">💬</div>
+</div>
+      <!-- <form class="reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:var(--gap)" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.'); this.reset()">
+        <div style="grid-column: span 1;">
+          <label for="name" class="muted">Full name</label>
+          <input id="name" name="name" required placeholder="Your name" style="width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: var(--panel); color:var(--text)">
+        </div>
+        <div style="grid-column: span 1;">
+          <label for="email" class="muted">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@company.com" style="width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: var(--panel); color:var(--text)">
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label for="msg" class="muted">Project details</label>
+          <textarea id="msg" name="message" rows="5" placeholder="Tell us about your app, goals and timeline" style="width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: var(--panel); color:var(--text)"></textarea>
+        </div>
+        <div>
+          <button class="cta" type="submit">Send request</button>
+        </div>
+      </form> -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
+                  <img src="assets/alwady-logo.jpeg" alt="A descriptive text of the image" width="40" height="40" style="border-radius: 15px;">
+<strong>Alwady for software solutions</strong>
+        </div>
+        <p class="muted">© <span id="year"></span> Alwady for software solutions. All rights reserved.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="muted">info@alwadysoft.com<br/>UAE</p>
+      </div>
+      <div>
+        <strong>Links</strong>
+        <p><a class="link" href="#services">Services</a><br><a class="link" href="#process">Process</a><br><a class="link" href="#contact">Contact</a></p>
+      </div>
+    </div>
+  </footer>
+<script src="js/script.js"></script>
+</body>
+</html>
+
