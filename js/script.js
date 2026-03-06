@@ -185,38 +185,30 @@ if (picker && typeof flatpickr !== "undefined") {
 
 
 // ===== MEETING FORM =====
-const meetingForm = document.getElementById("meetingForm");
+const form = document.getElementById('meetingForm');
 
-if (meetingForm) {
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent default submission
 
-  meetingForm.addEventListener("submit", function (e) {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const datetime = document.getElementById('datetime').value; // format: YYYY-MM-DDTHH:MM
 
-    e.preventDefault();
+  if (!datetime) return alert("Please select a date and time.");
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const datetime = document.getElementById("datetime").value;
+  // Convert datetime to Google Calendar format: YYYYMMDDTHHMMSSZ
+  const start = datetime.replace(/[-:]/g, '').replace('T', 'T') + '00Z';
+  const end = datetime.replace(/[-:]/g, '').replace('T', 'T') + '30Z'; // default 30 min meeting
 
-    if (!name || !email || !datetime) {
-      alert("Please complete the form");
-      return;
-    }
+  const url = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+              "&text=Website Meeting" +
+              "&dates=" + start + "/" + end +
+              "&details=Meeting with " + encodeURIComponent(name) + " (" + encodeURIComponent(email) + ")" + "&add=alwadysoftsolutions@gmail.com";
 
-    const date = datetime.replace(/[-: ]/g, "");
-    const start = date + "00";
-    const end = date + "30";
+  window.open(url, "_blank");
+});
 
-    const url =
-      "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-      "&text=Website Meeting" +
-      "&dates=" + start + "/" + end +
-      "&details=Meeting with " + name + " (" + email + ")";
 
-    window.open(url, "_blank");
-
-  });
-
-};
 
 // Observe all reveal elements
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
