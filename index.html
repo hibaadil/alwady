@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alwady for Software solutions | Build. Test. Launch. Grow.  — Mobile App Development, Testing & Growth</title>
-  <meta name="description" content="End‑to‑end mobile app development studio in the UAE. We plan, design, develop, test, launch and grow iOS/Android apps.">
+  <meta name="description" content="End‑to‑end Software development studio in the UAE. We plan, design, develop, test, launch and grow iOS/Android apps.">
   <meta name="theme-color" content="#0ea5e9">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -248,60 +248,55 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact">
-    <div class="container">
-     <div class="booking-container">   
-<div class="meeting-box">
-
-<h3>Schedule a Meeting</h3>
-
-<form id="meetingForm">
-
-<input type="text" id="name" placeholder="Your Name" required>
-
-<input type="email" id="email" placeholder="Your Email" required>
-
-<input type="text" id="datetime" placeholder="Select date & time" required>
-
-<button type="submit">Book Meeting</button>
-
-</form>
-<div class="booking-card">
-    <form id="meetingForm">
-      <!-- form inputs here -->
-    </form>
-  </div>
+<section id="contact">
+  <div class="container">
+    
+    <!-- Meeting calendar card -->
+    <div class="booking-container">
+    <div class="reveal">
+      <div class="meeting-box">
+        <h3>Schedule a Meeting</h3>
+        <form id="meetingForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <input type="datetime-local" id="datetime" placeholder="Select date & time" required>
+          <button type="submit">Book Meeting</button>
+        </form>
+      </div>
 </div>
-
-  <!-- New animated object -->
-<div class="info-panel in">
-  <div class="icon">📚</div>
-  <h3 class="headline">Let’s build something great</h3>
-  <p>Schedule your meeting easily.</p>
-
-  <!-- Floating chat icon -->
-  <div class="icon floating-icon">💬</div>
-</div>
-      <!-- <form class="reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:var(--gap)" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.'); this.reset()">
-        <div style="grid-column: span 1;">
-          <label for="name" class="muted">Full name</label>
-          <input id="name" name="name" required placeholder="Your name" style="width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: var(--panel); color:var(--text)">
-        </div>
-        <div style="grid-column: span 1;">
-          <label for="email" class="muted">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@company.com" style="width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: var(--panel); color:var(--text)">
-        </div>
-        <div style="grid-column: 1 / -1;">
-          <label for="msg" class="muted">Project details</label>
-          <textarea id="msg" name="message" rows="5" placeholder="Tell us about your app, goals and timeline" style="width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background: var(--panel); color:var(--text)"></textarea>
-        </div>
-        <div>
-          <button class="cta" type="submit">Send request</button>
-        </div>
-      </form> -->
+      <!-- Animated 3D / icon panel -->
+      <div class="info-panel in">
+        <div class="icon">📚</div>
+        <h3 class="headline reveal">Let’s build something great</h3>
+        <p class="reveal">Schedule your meeting easily.</p>
+        <div class="icon floating-icon">💬</div>
+      </div>
     </div>
-  </section>
 
+    <!-- Full-width project form below -->
+     <div class="form-wrapper">
+       <h1 class="reveal" >
+  Prefer not to book a meeting? <br> Send us your thoughts, and we'll get back to you.
+</p>
+<form class="reveal contact form " id="contactForm" action="https://formspree.io/f/id" method="POST">
+  
+        <label for="name-full" class="muted">Full name</label>
+        <input type="text" id="name-full" name="name" required placeholder="Your name">
+      
+        <label for="email-full" class="muted">Email</label>
+        <input  type="email" id="email-full" name="email" type="email" required placeholder="you@company.com">
+  
+        <label for="msg-full" class="muted">Project details</label>
+        <textarea  id="msg-full" name="message" rows="5" placeholder="Tell us about your app, goals and timeline"></textarea>
+  
+        <button class="cta" type="submit">Send request</button>
+   
+</form>
+      </div>
+      
+</div>
+  </div>
+</section>
   <footer>
     <div class="container footer-grid">
       <div>
