@@ -26,7 +26,14 @@
       --container: min(1200px, 90vw);
     }
     @media (prefers-color-scheme: light){
-      :root{--bg:#f8fafc;--bg-soft:#eef2ff;--panel:#ffffffa6;--text:#0f172a;--muted:#475569;--glass:#ffffffcc}
+      :root{
+        --bg:#f8fafc;
+        --bg-soft:#eef2ff;
+        --panel:#e2e8f0;
+        --text:#0f172a;
+        --muted:#475569;
+        --glass:#ffffffcc
+    }
       body::before{opacity:.35}
     }
 
@@ -124,7 +131,9 @@
 
     /* ===== PROCESS STRIP ===== */
     .process{display:grid; grid-template-columns: repeat(4,1fr); gap:var(--gap)}
-    .step{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius-lg); padding:18px}
+    .step{
+        border: #070a13;
+        background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius-lg); padding:18px}
     .step .num{font-weight:800; color:var(--primary); font-size: 22px}
     @media (max-width:900px){.process{grid-template-columns: repeat(2,1fr)}}
 
@@ -146,16 +155,29 @@ border:1px solid rgba(255,255,255,.1);
 box-shadow:var(--shadow);
 }
 
-.meeting-box input{
-width:100%;
-padding:12px;
-margin-top:12px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,.15);
-background:var(--bg-soft);
-color:var(--text);
+/* Contact form size fix */
+#contact form label {
+  font-size: 14px;
+  margin-top: 6px;
 }
 
+#contact form input,
+#contact form textarea {
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+#contact form button {
+  padding: 12px 20px;
+  font-size: 14px;
+  width: fit-content;
+  margin: 10px auto 0;
+  display: block;
+}
+#contact form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
 .meeting-box button{
 margin-top:15px;
 width:100%;
@@ -168,6 +190,7 @@ font-weight:600;
 cursor:pointer;
 }
 .booking-container {
+    margin-bottom: 50px;
   display: flex;
   gap: 2rem;
   align-items: flex-start;
@@ -175,7 +198,8 @@ cursor:pointer;
 .info-panel {
   position: relative; /* crucial for absolute children */
   min-height: 180px; /* ensure enough space for floating icon */
-  padding: 2.5rem;
+  padding: 3.5rem;
+  width: 50%;
   /* background: var(--panel); */
   /* border-radius: var(--radius-lg); */
   /* box-shadow: var(--shadow); */
@@ -313,6 +337,13 @@ cursor:pointer;
   margin: 6px 0 10px;
   font-size: clamp(18px, 2.2vw, 22px);
 }
+.form-wrapper {
+  margin-top: 70px;
+  width: 75%;
+  margin: 0 auto; /* centers horizontally */
+  padding: 20px;  /* optional inner spacing */
+  display: block; /* ensures it's block-level */
+}
 
 .project-info p {
   margin: 0;
@@ -337,4 +368,40 @@ cursor:pointer;
 .project-media .main-img:hover {
   transform: translateY(-6px) scale(1.02) rotateZ(-0.5deg);
   box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+
+/* ===== UNIVERSAL FORM STYLE ===== */
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 12px;
+  border: 1px solid #94a3b8;
+  background: var(--panel);
+  color: var(--text);
+  outline: none;
+}
+
+/* Placeholder */
+form input::placeholder,
+form textarea::placeholder{
+  color: var(--muted);
+}
+
+/* Light mode fix */
+@media (prefers-color-scheme: light){
+  form input,
+  form textarea{
+    background: var(--bg-soft);
+    color: #0f172a;
+    border: 1px solid rgba(0,0,0,.12);
+  }
+
+  form input::placeholder,
+  form textarea::placeholder{
+    color:#64748b;
+  }
 }
